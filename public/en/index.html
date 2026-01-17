@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | François Poitras</title>
-    <!-- We go UP one level to find assets because we are in the /en/ folder -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="gallery-body">
@@ -13,24 +12,29 @@
     <header id="main-nav" class="site-header"></header>
 
     <main class="content-wrapper">
-        <section class="controls">
-            <h1 id="page-title">Portfolio</h1>
-            <!-- Category buttons will be injected here -->
-            <div id="theme-filters" class="filter-group"></div>
-        </section>
+        <header class="gallery-intro">
+            <h1>François Poitras <span class="subtitle">| Photography</span></h1>
+            <nav class="sub-nav">
+                <!-- Filter buttons injected here -->
+                <div id="theme-filters" class="filter-group"></div>
+            </nav>
+        </header>
 
-        <!-- The Image Grid -->
         <div id="gallery-grid" class="grid-container">
-            <!-- Photos injected here -->
+            <!-- Photos + Titles injected here by app.js -->
         </div>
     </main>
+
     <div id="lightbox" class="lightbox">
         <span class="close-lightbox">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
         <div id="lightbox-caption"></div>
     </div>
+
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
     <script src="../assets/js/app.js"></script>
+
 </body>
 </html>

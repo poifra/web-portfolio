@@ -20,113 +20,7 @@
     z-index: 1000;
 }
 
-/* Slideshow Wrapper */
-.landing-container {
-    height: 100vh;
-    width: 100%;
-    overflow: hidden; 
-    position: relative;
-    background: #000;
-}
-
-.slideshow-container {
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-.slideshow-section, 
-.slideshow-container {
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-.slide {
-    display: none; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    filter: brightness(0.65);
-    display: block;
-    background-color: #000; 
-}
-
-/* Hero Text Overlay */
-.hero-overlay {
-    position: absolute;
-    z-index: 999; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    text-align: center;
-    color: white;
-    pointer-events: none;
-}
-
-.hero-overlay h1 {
-    font-size: 3.5rem;
-    letter-spacing: 0.2rem;
-    margin-bottom: 10px;
-}
-
-.hero-overlay p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-bottom: 30px;
-}
-
-/* Buttons */
-.hero-buttons {
-    pointer-events: auto;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-.btn {
-    padding: 12px 28px;
-    background: white;
-    color: black;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: all 0.2s;
-}
-
-.btn-outline {
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* Animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from { opacity: 0; } 
-    to { opacity: 1; }
-}
-
-* Gallery Page Specifics */
+/* Gallery Page Specifics */
 .gallery-body {
     background-color: #fff; /* White background for the gallery for better contrast */
     overflow-y: auto; /* Allow scrolling */
@@ -399,4 +293,61 @@ body {
     color: #666;
     font-size: 0.95rem;
     line-height: 1.5;
+}
+
+/* Better Header for Gallery */
+.gallery-intro {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.gallery-intro h1 {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-weight: 300;
+    color: #888;
+}
+
+.sub-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Updated Grid Item for Titles */
+.grid-item {
+    margin-bottom: 30px; /* Space for the title below */
+    break-inside: avoid;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.photo-info {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.photo-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.photo-theme {
+    font-size: 0.75rem;
+    color: #999;
+    text-transform: capitalize;
 }

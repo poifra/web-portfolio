@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (navElement) {
         navElement.innerHTML = `
             <nav style="display:flex; gap:30px; font-weight:500;">
-                <a href="/" style="text-decoration:none; color:inherit;">${lang === 'fr' ? 'Accueil' : 'Home'}</a>
                 <a href="/${lang}/" style="text-decoration:none; color:inherit; border-bottom: 2px solid #000;">${lang === 'fr' ? 'Galerie' : 'Gallery'}</a>
                 <a href="/${lang}/about.html" style="text-decoration:none; color:inherit;">${lang === 'fr' ? 'À Propos' : 'About'}</a>
                 <a href="/${lang}/gear.html" style="text-decoration:none; color:inherit;">${lang === 'fr' ? 'Équipement' : 'Gear'}</a>
@@ -60,41 +59,35 @@ function filterGallery(themeId, photos, lang, clickedBtn) {
 
 function renderGallery(photos, themeId, lang) {
     const grid = document.getElementById('gallery-grid');
-    
     grid.innerHTML = '';
 
-    const filtered = themeId === 'all' 
-        ? photos 
-        : photos.filter(p => p.theme === themeId);
+    const filtered = themeId === 'all' ? photos : photos.filter(p => p.theme === themeId);
 
     filtered.forEach(photo => {
         const item = document.createElement('div');
         item.className = 'grid-item';
         
         const imgPath = `../images/theme-${photo.theme}/${photo.src}`;
-        const caption = photo['alt_' + lang];
+        const title = lang === 'fr' ? photo.title_fr : photo.title_en;
+        const themeLabel = photo.theme;
 
-        item.innerHTML = `<img src="${imgPath}" alt="${caption}" loading="lazy">`;
+        item.innerHTML = `
+            <img src="${imgPath}" alt="${title}" loading="lazy">
+            <div class="photo-info">
+                <span class="photo-title">${title}</span>
+                <span class="photo-theme">${themeLabel}</span>
+            </div>
+        `;
         
-        item.addEventListener('click', () => {
-            openLightbox(imgPath, caption);
-        });
-
+        item.addEventListener('click', () => openLightbox(imgPath, title));
         grid.appendChild(item);
     });
 
-    //  Masonry layout initialization
-    imagesLoaded(grid, function() {
-        const msnry = new Masonry(grid, {
-            itemSelector: '.grid-item',
-            columnWidth: '.grid-item',
-            percentPosition: true,
-            gutter: 20 // Ensure this matches your CSS gap
-        });
-        msnry.layout();
+    // Re-trigger Masonry
+    imagesLoaded(grid, () => {
+        new Masonry(grid, { itemSelector: '.grid-item', gutter: 20 }).layout();
     });
 }
-
 function openLightbox(src, caption) {
     const lightbox = document.getElementById('lightbox');
     const lbImg = document.getElementById('lightbox-img');
