@@ -1,0 +1,10 @@
+{
+  "themes": [
+    { "id": "nature", "en": "Nature", "fr": "Nature" },
+    { "id": "street", "en": "Urban", "fr": "Photo de rue" }
+  ],
+  "photos": [
+    { "theme": "nature", "src": "nature-01.jpg", "alt_en": "AAAAA", "alt_fr": "TODO CALISSE" },
+    { "theme": "street", "src": "city-01.jpg", "alt_en": "BBBBB", "alt_fr": "TODO CALISSE ITOO" }
+  ]
+}

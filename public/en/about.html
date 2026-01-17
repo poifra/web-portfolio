@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About | Your Name Photography</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        /* TODO move to actual css */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #222;
+        }
+        .about-section {
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .about-container {
+            display: flex;
+            align-items: center;
+            max-width: 800px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .about-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 40px;
+            border: 3px solid #eee;
+        }
+        .about-description h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        .about-description p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        /* Basic Responsive fix */
+        @media (max-width: 600px) {
+            .about-container { flex-direction: column; text-align: center; }
+            .about-photo { margin-right: 0; margin-bottom: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- inject me daddy -->
+    <header id="main-nav"></header>
+
+    <section class="about-section">
+        <div class="about-container">
+            <img src="../images/profile.jpg" alt="Your Name" class="about-photo">
+            <div class="about-description">
+                <h2>Your Name</h2>
+                <p>
+                    I am a software engineer by day and a landscape photographer by golden hour. 
+                    This portfolio is a custom-built AWS solution designed to showcase 
+                    the intersection of technical performance and visual storytelling.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="../assets/js/app.js"></script>
+</body>
+</html>
