@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const response = await fetch('../assets/photos.json');
             const data = await response.json();
             
-            setupFilters(data, lang);
+            setupFilters(data.photos, lang);
             renderGallery(data.photos, 'all', lang);
         } catch (err) {
             console.error("Error loading photos:", err);
@@ -50,23 +50,48 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-function setupFilters(data, lang) {
+function setupFilters(photos, lang) {
     const filterContainer = document.getElementById('theme-filters');
     if (!filterContainer) return;
+    
+    // Clear container in case of re-renders
+    filterContainer.innerHTML = '';
 
-    // Create "All" button
+    // 1. Create and add "All" button FIRST
     const allBtn = document.createElement('button');
     allBtn.textContent = lang === 'fr' ? 'Tous' : 'All';
-    allBtn.className = 'filter-btn active';
-    allBtn.onclick = () => filterGallery('all', data.photos, lang, allBtn);
+    allBtn.className = 'filter-btn active'; // Set as active by default
+    allBtn.onclick = () => filterGallery('all', photos, lang, allBtn);
     filterContainer.appendChild(allBtn);
 
-    // Create dynamic theme buttons
-    data.themes.forEach(theme => {
+    // 2. Extract unique themes safely
+    const allThemes = [];
+    photos.forEach(p => {
+        // Use (p.theme || "") to prevent crashes if a photo is missing the theme key
+        const themes = (p.theme || "").split(',').map(t => t.trim());
+        themes.forEach(t => {
+            if (t) allThemes.push(t); // Only add if the string isn't empty
+        });
+    });
+
+    // 3. Get unique themes and sort them alphabetically
+    const uniqueThemes = [...new Set(allThemes)].sort();
+
+    const themeLabels = {
+        "nature": { en: "Nature", fr: "Nature" },
+        "urban": { en: "Street", fr: "Photo de rue" },
+        "52frames": { en: "52Frames", fr: "52Frames" }
+    };
+
+    // 4. Create theme buttons
+    uniqueThemes.forEach(id => {
         const btn = document.createElement('button');
-        btn.textContent = theme[lang];
+        // Use the label if it exists, otherwise capitalize the ID
+        const label = themeLabels[id] ? themeLabels[id][lang] : id.charAt(0).toUpperCase() + id.slice(1);
+        
+        btn.textContent = label;
         btn.className = 'filter-btn';
-        btn.onclick = () => filterGallery(theme.id, data.photos, lang, btn);
+        btn.onclick = () => filterGallery(id, photos, lang, btn);
         filterContainer.appendChild(btn);
     });
 }
@@ -82,29 +107,37 @@ function renderGallery(photos, themeId, lang) {
     const grid = document.getElementById('gallery-grid');
     grid.innerHTML = '';
 
-    const filtered = themeId === 'all' ? photos : photos.filter(p => p.theme === themeId);
+    const filtered = themeId === 'all' 
+        ? photos 
+        : photos.filter(p => {
+            // Split string into array, trim whitespace, and check for ID
+            const themeList = p.theme.split(',').map(t => t.trim());
+            return themeList.includes(themeId);
+        });
 
     filtered.forEach(photo => {
         const item = document.createElement('div');
         item.className = 'grid-item';
         
-        const imgPath = `../images/theme-${photo.theme}/${photo.src}`;
-        const title = lang === 'fr' ? photo.title_fr : photo.title_en;
-        const themeLabel = photo.theme;
+        // Grid uses THUMB (fast)
+        const thumbPath = `../images/${photo.thumb}`;
+        // Lightbox uses FULL (high res)
+        const fullPath = `../images/${photo.src}`;
 
         item.innerHTML = `
-            <img src="${imgPath}" alt="${title}" loading="lazy">
+            <img src="${thumbPath}" alt="${photo.title_en}" loading="lazy">
             <div class="photo-info">
-                <span class="photo-title">${title}</span>
-                <span class="photo-theme">${themeLabel}</span>
+                <span class="photo-title">${photo.title_en}</span>
             </div>
         `;
         
-        item.addEventListener('click', () => openLightbox(imgPath, title));
+        item.addEventListener('click', () => {
+            openLightbox(fullPath, photo.title_en); // Opens the big one
+        });
+
         grid.appendChild(item);
     });
 
-    // Re-trigger Masonry
     imagesLoaded(grid, () => {
         new Masonry(grid, { itemSelector: '.grid-item', gutter: 20 }).layout();
     });
