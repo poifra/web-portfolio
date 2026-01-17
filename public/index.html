@@ -1,12 +1,82 @@
 <!DOCTYPE html>
-<html>
-<script>
-    // Simple redirect logic
-    const userLang = navigator.language || navigator.userLanguage;
-    if (userLang.startsWith('fr')) {
-        window.location.href = "public/fr/";
-    } else {
-        window.location.href = "public/en/";
-    }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Photography & Engineering</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header id="main-nav" class="site-header"></header>
+
+    <main class="landing-container">
+        <section class="slideshow-section">
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="images/ecureuil.jpg" alt="Nature 1">
+                </div>
+                <div class="slide fade">
+                    <img src="images/lac_castor.jpg" alt="Landscape 1">
+                </div>
+                <div class="slide fade">
+                    <img src="images/papillons.jpg" alt="Papillon 1">
+                </div>
+
+                <!-- Overlay Content -->
+                <div class="hero-overlay">
+                    <h1>YOUR NAME</h1>
+                    <p>Capturing light, writing code.</p>
+                    <div class="hero-buttons">
+                        <a href="/fr/" class="btn btn-outline">Entrer (FR)</a>
+                        <a href="/en/" class="btn">Enter Gallery (EN)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+    // Ensure the DOM is fully loaded before looking for elements
+    document.addEventListener('DOMContentLoaded', () => {
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slide");
+
+        console.log("Slideshow Init: Found " + slides.length + " slides.");
+
+        function showSlides() {
+            // Safety check: if we navigated away or slides aren't there
+            if (slides.length === 0) {
+                console.warn("Slideshow: No slides found in DOM.");
+                return;
+            }
+
+            // Hide all slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.setProperty("display", "none", "important");
+            }
+
+            slideIndex++;
+            
+            // Reset to first slide if at the end
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            // Display the current slide
+            console.log("Showing slide index: " + (slideIndex - 1));
+            slides[slideIndex - 1].style.setProperty("display", "block", "important");
+
+            // Schedule the next transition
+            setTimeout(showSlides, 5000); 
+        }
+
+        // Trigger the first run
+        if (slides.length > 0) {
+            showSlides();
+        }
+    });
 </script>
+</body>
 </html>

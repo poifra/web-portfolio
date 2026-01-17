@@ -1,0 +1,133 @@
+/* Modern Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --header-height: 80px;
+    --accent: #0070f3;
+    --text-main: #1a1a1a;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text-main);
+    background-color: #fff;
+}
+
+/* Header Separation */
+.site-header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-bottom: 1px solid #eaeaea; /* Subtle separation line */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Slideshow Wrapper */
+.landing-container {
+    height: calc(100vh - var(--header-height));
+    width: 100%;
+    overflow: hidden; /* This is key: it cuts off the 'extra' image parts */
+    position: relative;
+    background: #000;
+}
+
+.slideshow-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.slideshow-section, 
+.slideshow-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.slide {
+    display: none; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    filter: brightness(0.65);
+    display: block; /* Removes bottom whitespace gap */
+    background-color: #000; /* Adds black bars if the photo doesn't fit the screen */
+}
+
+/* Hero Text Overlay */
+.hero-overlay {
+    position: absolute;
+    z-index: 999; /* Higher than anything else */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    pointer-events: none; /* Prevents overlay from blocking button clicks */
+}
+
+.hero-overlay h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.hero-buttons {
+    pointer-events: auto; /* Re-enables clicking for the buttons */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.btn {
+    padding: 12px 28px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0; } 
+    to { opacity: 1; }
+}
