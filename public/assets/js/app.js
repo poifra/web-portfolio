@@ -60,17 +60,84 @@ function filterGallery(themeId, photos, lang, clickedBtn) {
 
 function renderGallery(photos, themeId, lang) {
     const grid = document.getElementById('gallery-grid');
+    
+    // 1. Clear the grid
     grid.innerHTML = '';
 
     const filtered = themeId === 'all' 
         ? photos 
         : photos.filter(p => p.theme === themeId);
 
+    // 2. Add ALL items to the DOM first
     filtered.forEach(photo => {
         const item = document.createElement('div');
         item.className = 'grid-item';
-        // Note: Paths are relative to the /en/ or /fr/ folders
-        item.innerHTML = `<img src="../images/${photo.src}" alt="${photo['alt_' + lang]}" loading="lazy">`;
+        
+        const imgPath = `../images/theme-${photo.theme}/${photo.src}`;
+        const caption = photo['alt_' + lang];
+
+        item.innerHTML = `<img src="${imgPath}" alt="${caption}" loading="lazy">`;
+        
+        item.addEventListener('click', () => {
+            openLightbox(imgPath, caption);
+        });
+
         grid.appendChild(item);
     });
+
+    // 3. NOW that the loop is finished, tell Masonry to arrange them
+    // We use imagesLoaded to ensure widths/heights are known before calculating
+    imagesLoaded(grid, function() {
+        // Initialize Masonry
+        const msnry = new Masonry(grid, {
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-item',
+            percentPosition: true,
+            gutter: 20 // Ensure this matches your CSS gap
+        });
+        
+        // Force a layout refresh (fixes the "disappearing" issue)
+        msnry.layout();
+    });
+}
+
+function openLightbox(src, caption) {
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbCap = document.getElementById('lightbox-caption');
+
+    lightbox.style.display = "block";
+    lbImg.src = src;
+    lbCap.textContent = caption;
+
+    // Prevent body from scrolling while lightbox is open
+    document.body.style.overflow = "hidden";
+}
+
+// Close logic
+document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('lightbox');
+    const closeBtn = document.querySelector('.close-lightbox');
+
+    if (lightbox) {
+        // Close on clicking X
+        closeBtn.onclick = () => closeLightbox();
+        
+        // Close on clicking anywhere on the background
+        lightbox.onclick = (e) => {
+            if (e.target !== document.getElementById('lightbox-img')) {
+                closeLightbox();
+            }
+        };
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") closeLightbox();
+        });
+    }
+});
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = "none";
+    document.body.style.overflow = "auto";
 }

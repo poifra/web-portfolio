@@ -4,7 +4,15 @@
     { "id": "street", "en": "Urban", "fr": "Photo de rue" }
   ],
   "photos": [
-    { "theme": "nature", "src": "nature-01.jpg", "alt_en": "AAAAA", "alt_fr": "TODO CALISSE" },
-    { "theme": "street", "src": "city-01.jpg", "alt_en": "BBBBB", "alt_fr": "TODO CALISSE ITOO" }
+    { "theme": "nature", "src": "champignon.jpg", "alt_en": "AAAAA", "alt_fr": "TODO CALISSE" },
+    { "theme": "nature", "src": "collection_insecte.jpg", "alt_en": "AAAAA", "alt_fr": "TODO CALISSE" },
+    { "theme": "nature", "src": "papillon_bleu.jpg", "alt_en": "AAAAA", "alt_fr": "TODO CALISSE" },
+    { "theme": "nature", "src": "verglas.jpg", "alt_en": "AAAAA", "alt_fr": "TODO CALISSE" },
+    { "theme": "nature", "src": "grand-duc-1.jpg", "alt_en": "AAAAA", "alt_fr": "TODO CALISSE" },
+    { "theme": "street", "src": "velo-1.jpg", "alt_en": "BBBBB", "alt_fr": "TODO CALISSE ITOO" },
+    { "theme": "street", "src": "eglise-1.jpg", "alt_en": "BBBBB", "alt_fr": "TODO CALISSE ITOO" },
+    { "theme": "street", "src": "metro-1.jpg", "alt_en": "BBBBB", "alt_fr": "TODO CALISSE ITOO" },
+    { "theme": "street", "src": "cinema-beaubien.jpg", "alt_en": "BBBBB", "alt_fr": "TODO CALISSE ITOO" },
+    { "theme": "street", "src": "jarry-1.jpg", "alt_en": "BBBBB", "alt_fr": "TODO CALISSE ITOO" }
   ]
 }

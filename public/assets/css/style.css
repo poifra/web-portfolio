@@ -7,12 +7,6 @@
     --text-main: #1a1a1a;
 }
 
-body {
-    font-family: 'Inter', -apple-system, sans-serif;
-    color: var(--text-main);
-    background-color: #fff;
-}
-
 /* Header Separation */
 .site-header {
     height: var(--header-height);
@@ -181,19 +175,24 @@ body {
 
 /* The Grid */
 .grid-container {
-    display: grid;
-    /* This creates a responsive masonry-like grid */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-auto-rows: 300px;
-    gap: 20px;
+    position: relative; /* REQUIRED for Masonry */
+    width: 100%;
 }
 
 .grid-item {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 4px;
-    background-color: #f0f0f0;
+    width: calc(33.333% - 20px); /* 3 columns minus the gutter */
+    margin-bottom: 20px;
+    float: left; /* Helps Masonry with initial placement */
+}
+
+/* Responsive: 2 columns on tablets */
+@media (max-width: 900px) {
+    .grid-item { width: calc(50% - 20px); }
+}
+
+/* Responsive: 1 column on mobile */
+@media (max-width: 600px) {
+    .grid-item { width: 100%; }
 }
 
 .grid-item img {
@@ -206,4 +205,103 @@ body {
 
 .grid-item img:hover {
     transform: scale(1.05);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #222;
+}
+.about-section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+.about-container {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.about-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 40px;
+    border: 3px solid #eee;
+}
+.about-description h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+.about-description p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Basic Responsive fix */
+@media (max-width: 600px) {
+    .about-container { flex-direction: column; text-align: center; }
+    .about-photo { margin-right: 0; margin-bottom: 20px; }
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2000; /* Higher than header */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95); /* Dark background */
+    cursor: zoom-out;
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    user-select: none;
+}
+
+/* Caption */
+#lightbox-caption {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Close Button */
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+.close-lightbox:hover {
+    color: #bbb;
 }
