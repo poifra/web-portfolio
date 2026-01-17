@@ -1,77 +1,1095 @@
 {
   "photos": [
-    { "theme": "52Frames", "thumb": "thumbs/backlit.webp", "src": "backlit.jpg", "title_en": "Backlit work", "title_fr": "Travail en contre-jour" },
-    { "theme": "street,London 2024", "thumb": "thumbs/british-museum.webp", "src": "british-museum.jpg", "title_en": "British Museum", "title_fr": "British Museum" },
-    { "theme": "street,Montréal", "thumb": "thumbs/brume.webp", "src": "brume.jpg", "title_en": "Foggy morning", "title_fr": "Matin brumeux" },
-    { "theme": "52Frames", "thumb": "thumbs/café.webp", "src": "café.jpg", "title_en": "Coffee bean", "title_fr": "Grain de café" },
-    { "theme": "nature", "thumb": "thumbs/canard-1.webp", "src": "canard-1.jpg", "title_en": "Happy mallard", "title_fr": "Canard heureux" },
-    { "theme": "nature", "thumb": "thumbs/champignon.webp", "src": "champignon.jpg", "title_en": "Mushroom", "title_fr": "Champignon" },
-    { "theme": "street,Montréal", "thumb": "thumbs/chat.webp", "src": "chat.jpg", "title_en": "Montreal cat", "title_fr": "Chat de Montréal" },
-    { "theme": "nature", "thumb": "thumbs/chouette-1.webp", "src": "chouette-1.jpg", "title_en": "Barn owl", "title_fr": "Chouette effraie" },
-    { "theme": "street", "thumb": "thumbs/cinema-beaubien.webp", "src": "cinema-beaubien.jpg", "title_en": "A night at the movies", "title_fr": "Une nuit au cinéma" },
-    { "theme": "nature", "thumb": "thumbs/collection_insecte.webp", "src": "collection_insecte.jpg", "title_en": "Bug collection", "title_fr": "Collection d'insectes" },
-    { "theme": "nature", "thumb": "thumbs/crecerelle-2.webp", "src": "crecerelle-2.jpg", "title_en": "Kestrel's meal", "title_fr": "Repas de crécerelle" },
-    { "theme": "nature", "thumb": "thumbs/crecerelle-2024.webp", "src": "crecerelle-2024.jpg", "title_en": "Kestrel's attitude", "title_fr": "Attitude de crécerelle" },
-    { "theme": "Portraits", "thumb": "thumbs/diane.webp", "src": "diane.jpg", "title_en": "Diane", "title_fr": "Diane" },
-    { "theme": "street,Montréal", "thumb": "thumbs/eau.webp", "src": "eau.jpg", "title_en": "Water fountain", "title_fr": "Fontaine" },
-    { "theme": "nature", "thumb": "thumbs/ecureuil-1.webp", "src": "ecureuil-1.jpg", "title_en": "Squirrel", "title_fr": "Écureuil" },
-    { "theme": "nature", "thumb": "thumbs/ecureuil-2.webp", "src": "ecureuil-2.jpg", "title_en": "Split light squirrel", "title_fr": "Écureuil en lumière divisée" },
-    { "theme": "nature,52Frames", "thumb": "thumbs/eclipse_2024.webp", "src": "eclipse_2024.jpg", "title_en": "Total solar eclipse, april 2024", "title_fr": "Éclipse solaire totale, avril 2024" },
-    { "theme": "street,Montréal", "thumb": "thumbs/eglise-1.webp", "src": "eglise-1.jpg", "title_en": "Holy Family Church, Montréal", "title_fr": "Église Holy Family, Montréal" },
-    { "theme": "street,Montréal", "thumb": "thumbs/eglise-2.webp", "src": "eglise-2.jpg", "title_en": "Notre-Dame-Du-Rosaire, Montréal", "title_fr": "Notre-Dame-Du-Rosaire, Montréal" },
-    { "theme": "Portraits", "thumb": "thumbs/elise.webp", "src": "elise.jpg", "title_en": "Élise", "title_fr": "Élise" },
-    { "theme": "nature", "thumb": "thumbs/feuille-1.webp", "src": "feuille-1.jpg", "title_en": "Winter leaf", "title_fr": "Feuille d'hiver" },
-    { "theme": "street,Montréal", "thumb": "thumbs/film-1.webp", "src": "film-1.jpg", "title_en": "Jean-Talon Market", "title_fr": "Marché Jean-Talon" },
-    { "theme": "nature", "thumb": "thumbs/fourmis.webp", "src": "fourmis.jpg", "title_en": "Ants", "title_fr": "Fourmis" },
-    { "theme": "nature,52Frames", "thumb": "thumbs/frederick-back.webp", "src": "frederick-back.jpg", "title_en": "Frédérick-Back Park", "title_fr": "Parc Frédérick-Back" },
-    { "theme": "nature", "thumb": "thumbs/geai-bleu.webp", "src": "geai-bleu.jpg", "title_en": "Blue jay", "title_fr": "Geai bleu" },
-    { "theme": "nature", "thumb": "thumbs/givre.webp", "src": "givre.jpg", "title_en": "Frost", "title_fr": "Givre" },
-    { "theme": "nature", "thumb": "thumbs/grand-duc-1.webp", "src": "grand-duc-1.jpg", "title_en": "Great horned owl", "title_fr": "Grand-duc d'Amérique" },
-    { "theme": "nature,Portraits", "thumb": "thumbs/grand-duc-2.webp", "src": "grand-duc-2.jpg", "title_en": "Great horned owl", "title_fr": "Grand-duc d'Amérique" },
-    { "theme": "nature", "thumb": "thumbs/guepe.webp", "src": "guepe.jpg", "title_en": "Wasp", "title_fr": "Guêpe" },
-    { "theme": "52Frames", "thumb": "thumbs/guitare.webp", "src": "guitare.jpg", "title_en": "Guitar", "title_fr": "Guitare" },
-    { "theme": "52Frames", "thumb": "thumbs/hiver.webp", "src": "hiver.jpg", "title_en": "Winter boots", "title_fr": "Bottes d'hiver" },
-    { "theme": "nature", "thumb": "thumbs/insecte_vert.webp", "src": "insecte_vert.jpg", "title_en": "Chrysochroa castelnaudii (Jewel beetle)", "title_fr": "Chrysochroa castelnaudii (Scarabée joyau)" },
-    { "theme": "street,Montréal", "thumb": "thumbs/jarry-1.webp", "src": "jarry-1.jpg", "title_en": "Evening at Parc Jarry", "title_fr": "Soirée au Parc Jarry" },
-    { "theme": "street,London 2024", "thumb": "thumbs/kings-cross.webp", "src": "kings-cross.jpg", "title_en": "St. Pancras Station", "title_fr": "Gare de St. Pancras" },
-    { "theme": "nature", "thumb": "thumbs/libellule.webp", "src": "libellule.jpg", "title_en": "Dragonfly", "title_fr": "Libellule" },
-    { "theme": "street,London 2024", "thumb": "thumbs/londres-1.webp", "src": "londres-1.jpg", "title_en": "London workers", "title_fr": "Travailleurs londoniens" },
-    { "theme": "street,London 2024", "thumb": "thumbs/londres-2.webp", "src": "londres-2.jpg", "title_en": "London biker", "title_fr": "Cycliste londonien" },
-    { "theme": "street,London 2024", "thumb": "thumbs/londres-3.webp", "src": "londres-3.jpg", "title_en": "Russel Square Park", "title_fr": "Parc Russel Square" },
-    { "theme": "Portraits", "thumb": "thumbs/lucas.webp", "src": "lucas.jpg", "title_en": "Lucas", "title_fr": "Lucas" },
-    { "theme": "52Frames", "thumb": "thumbs/main.webp", "src": "main.jpg", "title_en": "Frost hand", "title_fr": "Main givrée" },
-    { "theme": "street,Montréal,52Frames", "thumb": "thumbs/maison-rose.webp", "src": "maison-rose.jpg", "title_en": "Montreal's pink house", "title_fr": "La maison rose de Montréal" },
-    { "theme": "street,Montréal", "thumb": "thumbs/marche-bonsecours.webp", "src": "marche-bonsecours.jpg", "title_en": "Bonsecours Market", "title_fr": "Marché Bonsecours" },
-    { "theme": "street,Montréal", "thumb": "thumbs/metro-1.webp", "src": "metro-1.jpg", "title_en": "Rush hour", "title_fr": "Heure de pointe" },
-    { "theme": "street,Montréal", "thumb": "thumbs/metro-2.webp", "src": "metro-2.jpg", "title_en": "Fabre station", "title_fr": "Station Fabre" },
-    { "theme": "street,Montréal,52Frames", "thumb": "thumbs/metro-3.webp", "src": "metro-3.jpg", "title_en": "Champ-de-Mars station", "title_fr": "Station Champ-de-Mars" },
-    { "theme": "Portraits", "thumb": "thumbs/moi-1.webp", "src": "moi-1.jpg", "title_en": "Self Portraits, 2024", "title_fr": "AutoPortraits, 2024" },
-    { "theme": "nature", "thumb": "thumbs/moineau.webp", "src": "moineau.jpg", "title_en": "Sparrow", "title_fr": "Moineau" },
-    { "theme": "street,Montréal", "thumb": "thumbs/montreal-1.webp", "src": "montreal-1.jpg", "title_en": "Downtown Montreal", "title_fr": "Centre-ville de Montréal" },
-    { "theme": "street,Montréal", "thumb": "thumbs/montreal-2.webp", "src": "montreal-2.jpg", "title_en": "Downtown Montreal from above", "title_fr": "Vue sur le centre-ville" },
-    { "theme": "street,Montréal", "thumb": "thumbs/montreal-3.webp", "src": "montreal-3.jpg", "title_en": "Lac des castors", "title_fr": "Lac des castors" },
-    { "theme": "street,Montréal", "thumb": "thumbs/montreal-4.webp", "src": "montreal-4.jpg", "title_en": "Summer afternoon", "title_fr": "Après-midi d'été" },
-    { "theme": "nature,52Frames", "thumb": "thumbs/mouche.webp", "src": "mouche.jpg", "title_en": "Fly", "title_fr": "Mouche" },
-    { "theme": "street", "thumb": "thumbs/moulin.webp", "src": "moulin.jpg", "title_en": "Isle-aux-Coudres mill", "title_fr": "Moulin de l'Isle-aux-Coudres" },
-    { "theme": "nature,52Frames", "thumb": "thumbs/neige-1.webp", "src": "neige-1.jpg", "title_en": "Snowflake", "title_fr": "Flocon de neige" },
-    { "theme": "street,Montréal,52Frames", "thumb": "thumbs/oratoire.webp", "src": "oratoire.jpg", "title_en": "St-Joseph Oratory", "title_fr": "Oratoire St-Joseph" },
-    { "theme": "nature,Montréal", "thumb": "thumbs/parc-jarry-2.webp", "src": "parc-jarry-2.jpg", "title_en": "Jarry Park in Winter", "title_fr": "Hiver au parc Jarry" },
-    { "theme": "nature", "thumb": "thumbs/papillon_bleu.webp", "src": "papillon_bleu.jpg", "title_en": "Male Morpho Helena", "title_fr": "Morpho Helena mâle" },
-    { "theme": "street,Montréal", "thumb": "thumbs/pda-1.webp", "src": "pda-1.jpg", "title_en": "Place des arts", "title_fr": "Place des arts" },
-    { "theme": "street,Montréal", "thumb": "thumbs/pigeons-1.webp", "src": "pigeons-1.jpg", "title_en": "Pigeons", "title_fr": "Pigeons" },
-    { "theme": "street", "thumb": "thumbs/plage-isle-aux-coudres.webp", "src": "plage-isle-aux-coudres.jpg", "title_en": "Isle-aux-Coudres beach", "title_fr": "Plage de l'Isle-aux-Coudres" },
-    { "theme": "street,Montréal,52Frames", "thumb": "thumbs/pluie.webp", "src": "pluie.jpg", "title_en": "Downpour", "title_fr": "Déluge" },
-    { "theme": "Portraits", "thumb": "thumbs/profile.webp", "src": "profile.jpg", "title_en": "Self-Portraits, 2026", "title_fr": "AutoPortraits, 2026" },
-    { "theme": "street,Montréal,52Frames", "thumb": "thumbs/rouge.webp", "src": "rouge.jpg", "title_en": "Red light", "title_fr": "Feu rouge" },
-    { "theme": "52Frames", "thumb": "thumbs/sad.webp", "src": "sad.jpg", "title_en": "Sadness", "title_fr": "Tristesse" },
-    { "theme": "street,Montréal", "thumb": "thumbs/souliers.webp", "src": "souliers.jpg", "title_en": "Abandoned shoes", "title_fr": "Souliers abandonnés" },
-    { "theme": "street,Montréal", "thumb": "thumbs/st-lau.webp", "src": "st-lau.jpg", "title_en": "Saint-Laurent Cégep", "title_fr": "Cégep Saint-Laurent" },
-    { "theme": "street,Montréal", "thumb": "thumbs/telephone-1.webp", "src": "telephone-1.jpg", "title_en": "Telephone booth", "title_fr": "Cabine téléphonique" },
-    { "theme": "street,London 2024", "thumb": "thumbs/tube-1.webp", "src": "tube-1.jpg", "title_en": "London Tube", "title_fr": "Métro de Londres" },
-    { "theme": "street,52Frames", "thumb": "thumbs/velo-1.webp", "src": "velo-1.jpg", "title_en": "Caught in the rain", "title_fr": "Pris sous la pluie" },
-    { "theme": "street,52Frames", "thumb": "thumbs/velo-2.webp", "src": "velo-2.jpg", "title_en": "Snow bike", "title_fr": "Vélo dans la neige" },
-    { "theme": "nature", "thumb": "thumbs/verglas.webp", "src": "verglas.jpg", "title_en": "Ice rain", "title_fr": "Verglas" },
-    { "theme": "nature", "thumb": "thumbs/voie-lactee.webp", "src": "voie-lactee.jpg", "title_en": "Milky Way", "title_fr": "Voie lactée" },
-    { "theme": "street,London 2024", "thumb": "thumbs/ww2-monument.webp", "src": "ww2-monument.jpg", "title_en": "WW2 Monument", "title_fr": "Monument de la Seconde Guerre mondiale" }
+    {
+      "theme": "52Frames",
+      "thumb": "thumbs/backlit.webp",
+      "src": "backlit.jpg",
+      "title_en": "Backlit work",
+      "title_fr": "Travail en contre-jour",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF33mmF1.4 R LM WR",
+        "fstop": "f/1.4",
+        "shutter": "1/20s",
+        "iso": 320,
+        "focal": "33mm"
+      }
+    },
+    {
+      "theme": "street,London 2024",
+      "thumb": "thumbs/british-museum.webp",
+      "src": "british-museum.jpg",
+      "title_en": "British Museum",
+      "title_fr": "British Museum",
+      "exif": {
+        "model": "Google Pixel 7",
+        "lens": "Pixel 7 back camera 2.35mm f/2.2",
+        "fstop": "f/2.2",
+        "shutter": "1/180s",
+        "iso": 38,
+        "focal": "2.35mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/brume.webp",
+      "src": "brume.jpg",
+      "title_en": "Foggy morning",
+      "title_fr": "Matin brumeux",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "AF 13/1.4 XF",
+        "fstop": "f/4",
+        "shutter": "1/220s",
+        "iso": 125,
+        "focal": "13mm"
+      }
+    },
+    {
+      "theme": "52Frames",
+      "thumb": "thumbs/café.webp",
+      "src": "café.jpg",
+      "title_en": "Coffee bean",
+      "title_fr": "Grain de café",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "65.0 mm",
+        "fstop": "f/1",
+        "shutter": "1/420s",
+        "iso": 800,
+        "focal": "65mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/canard-1.webp",
+      "src": "canard-1.jpg",
+      "title_en": "Happy mallard",
+      "title_fr": "Canard heureux",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5.6",
+        "shutter": "1/750s",
+        "iso": 400,
+        "focal": "300mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/champignon.webp",
+      "src": "champignon.jpg",
+      "title_en": "Mushroom",
+      "title_fr": "Champignon",
+      "exif": {
+        "model": "undefined undefined",
+        "fstop": "f/undefined",
+        "shutter": "1/NaNs",
+        "focal": "undefinedmm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/chat.webp",
+      "src": "chat.jpg",
+      "title_en": "Montreal cat",
+      "title_fr": "Chat de Montréal",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "AF 75/1.2 XF",
+        "fstop": "f/1.2",
+        "shutter": "1/200s",
+        "iso": 500,
+        "focal": "75mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/chouette-1.webp",
+      "src": "chouette-1.jpg",
+      "title_en": "Barn owl",
+      "title_fr": "Chouette effraie",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5.6",
+        "shutter": "1/1600s",
+        "iso": 500,
+        "focal": "300mm"
+      }
+    },
+    {
+      "theme": "street",
+      "thumb": "thumbs/cinema-beaubien.webp",
+      "src": "cinema-beaubien.jpg",
+      "title_en": "A night at the movies",
+      "title_fr": "Une nuit au cinéma",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF33mmF1.4 R LM WR",
+        "fstop": "f/1.4",
+        "shutter": "1/200s",
+        "iso": 640,
+        "focal": "33mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/collection_insecte.webp",
+      "src": "collection_insecte.jpg",
+      "title_en": "Bug collection",
+      "title_fr": "Collection d'insectes",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "65.0 mm",
+        "fstop": "f/1",
+        "shutter": "1/90s",
+        "iso": 1000,
+        "focal": "65mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/crecerelle-2.webp",
+      "src": "crecerelle-2.jpg",
+      "title_en": "Kestrel's meal",
+      "title_fr": "Repas de crécerelle",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5.6",
+        "shutter": "1/1250s",
+        "iso": 500,
+        "focal": "214.4mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/crecerelle-2024.webp",
+      "src": "crecerelle-2024.jpg",
+      "title_en": "Kestrel's attitude",
+      "title_fr": "Attitude de crécerelle",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5.6",
+        "shutter": "1/1000s",
+        "iso": 3200,
+        "focal": "300mm"
+      }
+    },
+    {
+      "theme": "Portraits",
+      "thumb": "thumbs/diane.webp",
+      "src": "diane.jpg",
+      "title_en": "Diane",
+      "title_fr": "Diane",
+      "exif": {
+        "model": "SONY ILCE-7RM5",
+        "lens": "FE 35mm F1.4 GM",
+        "fstop": "f/1.4",
+        "shutter": "1/125s",
+        "iso": 4000,
+        "focal": "35mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/eau.webp",
+      "src": "eau.jpg",
+      "title_en": "Water fountain",
+      "title_fr": "Fontaine",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/6.4",
+        "shutter": "1/23000s",
+        "iso": 3200,
+        "focal": "300mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/ecureuil-1.webp",
+      "src": "ecureuil-1.jpg",
+      "title_en": "Squirrel",
+      "title_fr": "Écureuil",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5.6",
+        "shutter": "1/50s",
+        "iso": 400,
+        "focal": "300mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/ecureuil-2.webp",
+      "src": "ecureuil-2.jpg",
+      "title_en": "Split light squirrel",
+      "title_fr": "Écureuil en lumière divisée",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5.6",
+        "shutter": "1/200s",
+        "iso": 640,
+        "focal": "300mm"
+      }
+    },
+    {
+      "theme": "nature,52Frames",
+      "thumb": "thumbs/eclipse_2024.webp",
+      "src": "eclipse_2024.jpg",
+      "title_en": "Total solar eclipse, april 2024",
+      "title_fr": "Éclipse solaire totale, avril 2024",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/8",
+        "shutter": "1/500s",
+        "iso": 125,
+        "focal": "300mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/eglise-1.webp",
+      "src": "eglise-1.jpg",
+      "title_en": "Holy Family Church, Montréal",
+      "title_fr": "Église Holy Family, Montréal",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "AF 75/1.2 XF",
+        "fstop": "f/11",
+        "shutter": "1/160s",
+        "iso": 200,
+        "focal": "75mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/eglise-2.webp",
+      "src": "eglise-2.jpg",
+      "title_en": "Notre-Dame-Du-Rosaire, Montréal",
+      "title_fr": "Notre-Dame-Du-Rosaire, Montréal",
+      "exif": {
+        "model": "undefined undefined",
+        "fstop": "f/undefined",
+        "shutter": "1/NaNs",
+        "focal": "undefinedmm"
+      }
+    },
+    {
+      "theme": "Portraits",
+      "thumb": "thumbs/elise.webp",
+      "src": "elise.jpg",
+      "title_en": "Élise",
+      "title_fr": "Élise",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF33mmF1.4 R LM WR",
+        "fstop": "f/1.4",
+        "shutter": "1/950s",
+        "iso": 125,
+        "focal": "33mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/feuille-1.webp",
+      "src": "feuille-1.jpg",
+      "title_en": "Winter leaf",
+      "title_fr": "Feuille d'hiver",
+      "exif": {
+        "model": "SONY ILCE-7RM5",
+        "lens": "FE 35mm F1.4 GM",
+        "fstop": "f/1.4",
+        "shutter": "1/1600s",
+        "iso": 100,
+        "focal": "35mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/film-1.webp",
+      "src": "film-1.jpg",
+      "title_en": "Jean-Talon Market",
+      "title_fr": "Marché Jean-Talon",
+      "exif": {
+        "model": "NORITSU KOKI QSS-32_33",
+        "fstop": "f/undefined",
+        "shutter": "1/NaNs",
+        "focal": "undefinedmm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/fourmis.webp",
+      "src": "fourmis.jpg",
+      "title_en": "Ants",
+      "title_fr": "Fourmis",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "65.0 mm",
+        "fstop": "f/1",
+        "shutter": "1/300s",
+        "iso": 2000,
+        "focal": "65mm"
+      }
+    },
+    {
+      "theme": "nature,52Frames",
+      "thumb": "thumbs/frederick-back.webp",
+      "src": "frederick-back.jpg",
+      "title_en": "Frédérick-Back Park",
+      "title_fr": "Parc Frédérick-Back",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "AF 13/1.4 XF",
+        "fstop": "f/8",
+        "shutter": "1/900s",
+        "iso": 500,
+        "focal": "13mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/geai-bleu.webp",
+      "src": "geai-bleu.jpg",
+      "title_en": "Blue jay",
+      "title_fr": "Geai bleu",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5",
+        "shutter": "1/600s",
+        "iso": 1600,
+        "focal": "198.9mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/givre.webp",
+      "src": "givre.jpg",
+      "title_en": "Frost",
+      "title_fr": "Givre",
+      "exif": {
+        "model": "undefined undefined",
+        "fstop": "f/undefined",
+        "shutter": "1/NaNs",
+        "focal": "undefinedmm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/grand-duc-1.webp",
+      "src": "grand-duc-1.jpg",
+      "title_en": "Great horned owl",
+      "title_fr": "Grand-duc d'Amérique",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5",
+        "shutter": "1/1000s",
+        "iso": 1600,
+        "focal": "81.3mm"
+      }
+    },
+    {
+      "theme": "nature,Portraits",
+      "thumb": "thumbs/grand-duc-2.webp",
+      "src": "grand-duc-2.jpg",
+      "title_en": "Great horned owl",
+      "title_fr": "Grand-duc d'Amérique",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5",
+        "shutter": "1/1000s",
+        "iso": 1250,
+        "focal": "81.3mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/guepe.webp",
+      "src": "guepe.jpg",
+      "title_en": "Wasp",
+      "title_fr": "Guêpe"
+    },
+    {
+      "theme": "52Frames",
+      "thumb": "thumbs/guitare.webp",
+      "src": "guitare.jpg",
+      "title_en": "Guitar",
+      "title_fr": "Guitare",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/8",
+        "shutter": "1/150s",
+        "iso": 3200,
+        "focal": "55mm"
+      }
+    },
+    {
+      "theme": "52Frames",
+      "thumb": "thumbs/hiver.webp",
+      "src": "hiver.jpg",
+      "title_en": "Winter boots",
+      "title_fr": "Bottes d'hiver",
+      "exif": {
+        "model": "SONY ILCE-7RM5",
+        "lens": "FE 35mm F1.4 GM",
+        "fstop": "f/1.4",
+        "shutter": "1/8000s",
+        "iso": 200,
+        "focal": "35mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/insecte_vert.webp",
+      "src": "insecte_vert.jpg",
+      "title_en": "Chrysochroa castelnaudii (Jewel beetle)",
+      "title_fr": "Chrysochroa castelnaudii (Scarabée joyau)",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "65.0 mm",
+        "fstop": "f/1",
+        "shutter": "1/100s",
+        "iso": 1000,
+        "focal": "65mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/jarry-1.webp",
+      "src": "jarry-1.jpg",
+      "title_en": "Evening at Parc Jarry",
+      "title_fr": "Soirée au Parc Jarry",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5",
+        "shutter": "1/4000s",
+        "iso": 500,
+        "focal": "70mm"
+      }
+    },
+    {
+      "theme": "street,London 2024",
+      "thumb": "thumbs/kings-cross.webp",
+      "src": "kings-cross.jpg",
+      "title_en": "St. Pancras Station",
+      "title_fr": "Gare de St. Pancras",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/5.6",
+        "shutter": "1/1600s",
+        "iso": 500,
+        "focal": "18mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/libellule.webp",
+      "src": "libellule.jpg",
+      "title_en": "Dragonfly",
+      "title_fr": "Libellule",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/8",
+        "shutter": "1/1250s",
+        "iso": 320,
+        "focal": "55mm"
+      }
+    },
+    {
+      "theme": "street,London 2024",
+      "thumb": "thumbs/londres-1.webp",
+      "src": "londres-1.jpg",
+      "title_en": "London workers",
+      "title_fr": "Travailleurs londoniens",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/3.6",
+        "shutter": "1/7500s",
+        "iso": 500,
+        "focal": "32.9mm"
+      }
+    },
+    {
+      "theme": "street,London 2024",
+      "thumb": "thumbs/londres-2.webp",
+      "src": "londres-2.jpg",
+      "title_en": "London biker",
+      "title_fr": "Cycliste londonien",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/8",
+        "shutter": "1/900s",
+        "iso": 500,
+        "focal": "18mm"
+      }
+    },
+    {
+      "theme": "street,London 2024",
+      "thumb": "thumbs/londres-3.webp",
+      "src": "londres-3.jpg",
+      "title_en": "Russel Square Park",
+      "title_fr": "Parc Russel Square",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF33mmF1.4 R LM WR",
+        "fstop": "f/8",
+        "shutter": "1/100s",
+        "iso": 640,
+        "focal": "33mm"
+      }
+    },
+    {
+      "theme": "Portraits",
+      "thumb": "thumbs/lucas.webp",
+      "src": "lucas.jpg",
+      "title_en": "Lucas",
+      "title_fr": "Lucas",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/4",
+        "shutter": "1/400s",
+        "iso": 640,
+        "focal": "55mm"
+      }
+    },
+    {
+      "theme": "52Frames",
+      "thumb": "thumbs/main.webp",
+      "src": "main.jpg",
+      "title_en": "Frost hand",
+      "title_fr": "Main givrée",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "65.0 mm",
+        "fstop": "f/1",
+        "shutter": "1/300s",
+        "iso": 640,
+        "focal": "65mm"
+      }
+    },
+    {
+      "theme": "street,Montréal,52Frames",
+      "thumb": "thumbs/maison-rose.webp",
+      "src": "maison-rose.jpg",
+      "title_en": "Montreal's pink house",
+      "title_fr": "La maison rose de Montréal",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/8",
+        "shutter": "1/350s",
+        "iso": 320,
+        "focal": "70mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/marche-bonsecours.webp",
+      "src": "marche-bonsecours.jpg",
+      "title_en": "Bonsecours Market",
+      "title_fr": "Marché Bonsecours",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF33mmF1.4 R LM WR",
+        "fstop": "f/8",
+        "shutter": "1/480s",
+        "iso": 320,
+        "focal": "33mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/metro-1.webp",
+      "src": "metro-1.jpg",
+      "title_en": "Rush hour",
+      "title_fr": "Heure de pointe",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/4",
+        "shutter": "1/1s",
+        "iso": 125,
+        "focal": "55mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/metro-2.webp",
+      "src": "metro-2.jpg",
+      "title_en": "Fabre station",
+      "title_fr": "Station Fabre",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "AF 13/1.4 XF",
+        "fstop": "f/1.4",
+        "shutter": "1/12000s",
+        "iso": 3200,
+        "focal": "13mm"
+      }
+    },
+    {
+      "theme": "street,Montréal,52Frames",
+      "thumb": "thumbs/metro-3.webp",
+      "src": "metro-3.jpg",
+      "title_en": "Champ-de-Mars station",
+      "title_fr": "Station Champ-de-Mars",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "AF 13/1.4 XF",
+        "fstop": "f/5.6",
+        "shutter": "1/1s",
+        "iso": 125,
+        "focal": "13mm"
+      }
+    },
+    {
+      "theme": "Portraits",
+      "thumb": "thumbs/moi-1.webp",
+      "src": "moi-1.jpg",
+      "title_en": "Self Portraits, 2024",
+      "title_fr": "AutoPortraits, 2024",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/8",
+        "shutter": "1/60s",
+        "iso": 160,
+        "focal": "34.3mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/moineau.webp",
+      "src": "moineau.jpg",
+      "title_en": "Sparrow",
+      "title_fr": "Moineau",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5.6",
+        "shutter": "1/200s",
+        "iso": 320,
+        "focal": "300mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/montreal-1.webp",
+      "src": "montreal-1.jpg",
+      "title_en": "Downtown Montreal",
+      "title_fr": "Centre-ville de Montréal",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF33mmF1.4 R LM WR",
+        "fstop": "f/2.5",
+        "shutter": "1/680s",
+        "iso": 320,
+        "focal": "33mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/montreal-2.webp",
+      "src": "montreal-2.jpg",
+      "title_en": "Downtown Montreal from above",
+      "title_fr": "Vue sur le centre-ville",
+      "exif": {
+        "model": "undefined undefined",
+        "fstop": "f/undefined",
+        "shutter": "1/NaNs",
+        "focal": "undefinedmm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/montreal-3.webp",
+      "src": "montreal-3.jpg",
+      "title_en": "Lac des castors",
+      "title_fr": "Lac des castors",
+      "exif": {
+        "model": "undefined undefined",
+        "fstop": "f/undefined",
+        "shutter": "1/NaNs",
+        "focal": "undefinedmm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/montreal-4.webp",
+      "src": "montreal-4.jpg",
+      "title_en": "Summer afternoon",
+      "title_fr": "Après-midi d'été",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF33mmF1.4 R LM WR",
+        "fstop": "f/1.4",
+        "shutter": "1/3800s",
+        "iso": 125,
+        "focal": "33mm"
+      }
+    },
+    {
+      "theme": "nature,52Frames",
+      "thumb": "thumbs/mouche.webp",
+      "src": "mouche.jpg",
+      "title_en": "Fly",
+      "title_fr": "Mouche",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "65.0 mm",
+        "fstop": "f/1",
+        "shutter": "1/120s",
+        "iso": 160,
+        "focal": "65mm"
+      }
+    },
+    {
+      "theme": "street",
+      "thumb": "thumbs/moulin.webp",
+      "src": "moulin.jpg",
+      "title_en": "Isle-aux-Coudres mill",
+      "title_fr": "Moulin de l'Isle-aux-Coudres",
+      "exif": {
+        "model": "undefined undefined",
+        "fstop": "f/undefined",
+        "shutter": "1/NaNs",
+        "focal": "undefinedmm"
+      }
+    },
+    {
+      "theme": "nature,52Frames",
+      "thumb": "thumbs/neige-1.webp",
+      "src": "neige-1.jpg",
+      "title_en": "Snowflake",
+      "title_fr": "Flocon de neige",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "65.0 mm",
+        "fstop": "f/1",
+        "shutter": "1/200s",
+        "iso": 3200,
+        "focal": "65mm"
+      }
+    },
+    {
+      "theme": "street,Montréal,52Frames",
+      "thumb": "thumbs/oratoire.webp",
+      "src": "oratoire.jpg",
+      "title_en": "St-Joseph Oratory",
+      "title_fr": "Oratoire St-Joseph",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/4.5",
+        "shutter": "1/10s",
+        "iso": 4000,
+        "focal": "28.9mm"
+      }
+    },
+    {
+      "theme": "nature,Montréal",
+      "thumb": "thumbs/parc-jarry-2.webp",
+      "src": "parc-jarry-2.jpg",
+      "title_en": "Jarry Park in Winter",
+      "title_fr": "Hiver au parc Jarry",
+      "exif": {
+        "model": "undefined undefined",
+        "fstop": "f/undefined",
+        "shutter": "1/NaNs",
+        "focal": "undefinedmm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/papillon_bleu.webp",
+      "src": "papillon_bleu.jpg",
+      "title_en": "Male Morpho Helena",
+      "title_fr": "Morpho Helena mâle",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "65.0 mm",
+        "fstop": "f/1",
+        "shutter": "1/105s",
+        "iso": 1000,
+        "focal": "65mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/pda-1.webp",
+      "src": "pda-1.jpg",
+      "title_en": "Place des arts",
+      "title_fr": "Place des arts",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF33mmF1.4 R LM WR",
+        "fstop": "f/1.4",
+        "shutter": "1/1400s",
+        "iso": 640,
+        "focal": "33mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/pigeons-1.webp",
+      "src": "pigeons-1.jpg",
+      "title_en": "Pigeons",
+      "title_fr": "Pigeons",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/6.4",
+        "shutter": "1/900s",
+        "iso": 640,
+        "focal": "153.2mm"
+      }
+    },
+    {
+      "theme": "street",
+      "thumb": "thumbs/plage-isle-aux-coudres.webp",
+      "src": "plage-isle-aux-coudres.jpg",
+      "title_en": "Isle-aux-Coudres beach",
+      "title_fr": "Plage de l'Isle-aux-Coudres",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/6.4",
+        "shutter": "1/1400s",
+        "iso": 320,
+        "focal": "55mm"
+      }
+    },
+    {
+      "theme": "street,Montréal,52Frames",
+      "thumb": "thumbs/pluie.webp",
+      "src": "pluie.jpg",
+      "title_en": "Downpour",
+      "title_fr": "Déluge",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5.6",
+        "shutter": "1/1000s",
+        "iso": 3200,
+        "focal": "300mm"
+      }
+    },
+    {
+      "theme": "Portraits",
+      "thumb": "thumbs/profile.webp",
+      "src": "profile.jpg",
+      "title_en": "Self-Portraits, 2026",
+      "title_fr": "AutoPortraits, 2026",
+      "exif": {
+        "model": "SONY ILCE-7RM5",
+        "lens": "FE 35mm F1.4 GM",
+        "fstop": "f/5",
+        "shutter": "1/250s",
+        "iso": 100,
+        "focal": "35mm"
+      }
+    },
+    {
+      "theme": "street,Montréal,52Frames",
+      "thumb": "thumbs/rouge.webp",
+      "src": "rouge.jpg",
+      "title_en": "Red light",
+      "title_fr": "Feu rouge",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5.6",
+        "shutter": "1/125s",
+        "iso": 3200,
+        "focal": "101.6mm"
+      }
+    },
+    {
+      "theme": "52Frames",
+      "thumb": "thumbs/sad.webp",
+      "src": "sad.jpg",
+      "title_en": "Sadness",
+      "title_fr": "Tristesse",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/5",
+        "shutter": "1/45s",
+        "iso": 3200,
+        "focal": "55mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/souliers.webp",
+      "src": "souliers.jpg",
+      "title_en": "Abandoned shoes",
+      "title_fr": "Souliers abandonnés",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF33mmF1.4 R LM WR",
+        "fstop": "f/1.4",
+        "shutter": "1/320s",
+        "iso": 125,
+        "focal": "33mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/st-lau.webp",
+      "src": "st-lau.jpg",
+      "title_en": "Saint-Laurent Cégep",
+      "title_fr": "Cégep Saint-Laurent",
+      "exif": {
+        "model": "Google Pixel 7",
+        "lens": "Pixel 7 back camera 6.81mm f/1.85",
+        "fstop": "f/1.9",
+        "shutter": "1/120s",
+        "iso": 717,
+        "focal": "6.81mm"
+      }
+    },
+    {
+      "theme": "street,Montréal",
+      "thumb": "thumbs/telephone-1.webp",
+      "src": "telephone-1.jpg",
+      "title_en": "Telephone booth",
+      "title_fr": "Cabine téléphonique",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF33mmF1.4 R LM WR",
+        "fstop": "f/2.8",
+        "shutter": "1/50s",
+        "iso": 3200,
+        "focal": "33mm"
+      }
+    },
+    {
+      "theme": "street,London 2024",
+      "thumb": "thumbs/tube-1.webp",
+      "src": "tube-1.jpg",
+      "title_en": "London Tube",
+      "title_fr": "Métro de Londres",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/5.6",
+        "shutter": "1/100s",
+        "iso": 2000,
+        "focal": "26.5mm"
+      }
+    },
+    {
+      "theme": "street,52Frames",
+      "thumb": "thumbs/velo-1.webp",
+      "src": "velo-1.jpg",
+      "title_en": "Caught in the rain",
+      "title_fr": "Pris sous la pluie",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5.6",
+        "shutter": "1/300s",
+        "iso": 12800,
+        "focal": "300mm"
+      }
+    },
+    {
+      "theme": "street,52Frames",
+      "thumb": "thumbs/velo-2.webp",
+      "src": "velo-2.jpg",
+      "title_en": "Snow bike",
+      "title_fr": "Vélo dans la neige",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF33mmF1.4 R LM WR",
+        "fstop": "f/1.4",
+        "shutter": "1/140s",
+        "iso": 3200,
+        "focal": "33mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/verglas.webp",
+      "src": "verglas.jpg",
+      "title_en": "Ice rain",
+      "title_fr": "Verglas",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF70-300mmF4-5.6 R LM OIS WR",
+        "fstop": "f/5.6",
+        "shutter": "1/220s",
+        "iso": 3200,
+        "focal": "300mm"
+      }
+    },
+    {
+      "theme": "nature",
+      "thumb": "thumbs/voie-lactee.webp",
+      "src": "voie-lactee.jpg",
+      "title_en": "Milky Way",
+      "title_fr": "Voie lactée",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/4",
+        "shutter": "1/0s",
+        "iso": 3200,
+        "focal": "18mm"
+      }
+    },
+    {
+      "theme": "street,London 2024",
+      "thumb": "thumbs/ww2-monument.webp",
+      "src": "ww2-monument.jpg",
+      "title_en": "WW2 Monument",
+      "title_fr": "Monument de la Seconde Guerre mondiale"
+    },
+    {
+      "src": "guepe.JPG",
+      "theme": "all",
+      "title_en": "guepe.JPG",
+      "title_fr": "guepe.JPG",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "65.0 mm",
+        "fstop": "f/1",
+        "shutter": "1/200s",
+        "iso": 2000,
+        "focal": "65mm"
+      }
+    },
+    {
+      "src": "ww2-monnument.jpg",
+      "theme": "all",
+      "title_en": "ww2-monnument.jpg",
+      "title_fr": "ww2-monnument.jpg",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/6.4",
+        "shutter": "1/420s",
+        "iso": 500,
+        "focal": "27.7mm"
+      }
+    }
   ]
 }
