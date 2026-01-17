@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gear | François Poitras</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="gallery-body">
+
+    <header id="main-nav" class="site-header"></header>
+
+    <main class="content-wrapper">
+        <section class="gear-header">
+            <h1>What's in my bag</h1>
+            <p>The tools I use to capture my images.</p>
+        </section>
+
+        <section id="gear-list" class="gear-sections">
+            <!-- Data will be injected here -->
+        </section>
+    </main>
+
+    <script src="../assets/js/app.js"></script>
+    <script>
+        // Local script to handle gear loading
+        async function loadGear() {
+            const path = window.location.pathname;
+            const lang = path.includes('/fr/') ? 'fr' : 'en';
+            
+            const response = await fetch('../assets/gear.json');
+            const data = await response.json();
+            const container = document.getElementById('gear-list');
+
+            const sections = [
+                { title: lang === 'fr' ? 'Boîtiers' : 'Bodies', items: data.bodies },
+                { title: lang === 'fr' ? 'Objectifs' : 'Lenses', items: data.lenses }
+            ];
+
+            container.innerHTML = sections.map(sec => `
+                <div class="gear-category">
+                    <h2>${sec.title}</h2>
+                    <div class="gear-grid">
+                        ${sec.items.map(item => `
+                            <div class="gear-card">
+                                <h3>${item.name}</h3>
+                                <p>${lang === 'fr' ? item.desc_fr : item.desc_en}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+        loadGear();
+    </script>
+</body>
+</html>

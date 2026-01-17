@@ -1,0 +1,26 @@
+{
+  "bodies": [
+    {
+      "name": "Sony A7RV",
+      "desc_en": "My high resolution full-frame body.",
+      "desc_fr": "Mon boîtier plein format à haute résolution."
+    }
+  ],
+  "lenses": [
+    {
+      "name": "Sony FE 35mm F/1.4 GM ",
+      "desc_en": "Versatile all-rounder, low light king, for street or landscapes.",
+      "desc_fr": "Objectif polyvalent, le roi de la basse lumière, que ce soit pour la rue ou les paysages."
+    },
+    {
+      "name": "Sony FE 20mm F/1.8 G",
+      "desc_en": "Wide angle lens for landscapes, architecture and astrophotography.",
+      "desc_fr": "Objectif grand angle pour les paysages, l'architecture et l'astrophotographie."
+    },
+    {
+      "name": "Sony FE 100mm F2.8 GM OSS",
+      "desc_en": "Macro lens for close-up nature and detail shots.",
+      "desc_fr": "Objectif macro pour les prises de vue rapprochées de la nature et des détails."
+    }
+  ]
+}

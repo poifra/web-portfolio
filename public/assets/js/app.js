@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <a href="/" style="text-decoration:none; color:inherit;">${lang === 'fr' ? 'Accueil' : 'Home'}</a>
                 <a href="/${lang}/" style="text-decoration:none; color:inherit; border-bottom: 2px solid #000;">${lang === 'fr' ? 'Galerie' : 'Gallery'}</a>
                 <a href="/${lang}/about.html" style="text-decoration:none; color:inherit;">${lang === 'fr' ? 'À Propos' : 'About'}</a>
+                <a href="/${lang}/gear.html" style="text-decoration:none; color:inherit;">${lang === 'fr' ? 'Équipement' : 'Gear'}</a>
             </nav>
         `;
     }
@@ -51,7 +52,6 @@ function setupFilters(data, lang) {
 }
 
 function filterGallery(themeId, photos, lang, clickedBtn) {
-    // Update active button UI
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
     clickedBtn.classList.add('active');
 
@@ -61,14 +61,12 @@ function filterGallery(themeId, photos, lang, clickedBtn) {
 function renderGallery(photos, themeId, lang) {
     const grid = document.getElementById('gallery-grid');
     
-    // 1. Clear the grid
     grid.innerHTML = '';
 
     const filtered = themeId === 'all' 
         ? photos 
         : photos.filter(p => p.theme === themeId);
 
-    // 2. Add ALL items to the DOM first
     filtered.forEach(photo => {
         const item = document.createElement('div');
         item.className = 'grid-item';
@@ -85,18 +83,14 @@ function renderGallery(photos, themeId, lang) {
         grid.appendChild(item);
     });
 
-    // 3. NOW that the loop is finished, tell Masonry to arrange them
-    // We use imagesLoaded to ensure widths/heights are known before calculating
+    //  Masonry layout initialization
     imagesLoaded(grid, function() {
-        // Initialize Masonry
         const msnry = new Masonry(grid, {
             itemSelector: '.grid-item',
             columnWidth: '.grid-item',
             percentPosition: true,
             gutter: 20 // Ensure this matches your CSS gap
         });
-        
-        // Force a layout refresh (fixes the "disappearing" issue)
         msnry.layout();
     });
 }
@@ -120,17 +114,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.close-lightbox');
 
     if (lightbox) {
-        // Close on clicking X
         closeBtn.onclick = () => closeLightbox();
         
-        // Close on clicking anywhere on the background
         lightbox.onclick = (e) => {
             if (e.target !== document.getElementById('lightbox-img')) {
                 closeLightbox();
             }
         };
 
-        // Close on ESC key
         document.addEventListener('keydown', (e) => {
             if (e.key === "Escape") closeLightbox();
         });
