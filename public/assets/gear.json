@@ -4,6 +4,11 @@
       "name": "Sony A7RV",
       "desc_en": "My high resolution full-frame body.",
       "desc_fr": "Mon boîtier plein format à haute résolution."
+    },
+    {
+      "name": "Fujifilm X-T5",
+      "desc_en": "The retro mirrorless APS-C camera that started it all.",
+      "desc_fr": "La caméra sans miroir APS-C rétro qui a tout déclenché."
     }
   ],
   "lenses": [
@@ -21,6 +26,31 @@
       "name": "Sony FE 100mm F2.8 GM OSS",
       "desc_en": "Macro lens for close-up nature and detail shots.",
       "desc_fr": "Objectif macro pour les prises de vue rapprochées de la nature et des détails."
+    },
+    {
+      "name": "Fujifilm XF 33mm F/1.4 R LM WR",
+      "desc_en": "The nifty fifty for street and general photography.",
+      "desc_fr": "La focale classique pour la photographie de rue et générale."
+    },
+    {
+      "name": "Fujifilm XF 18-55mm F/2.8-4 R LM OIS",
+      "desc_en": "Versatile zoom lens for everyday shooting.",
+      "desc_fr": "Objectif zoom polyvalent pour la photo quotidienne."
+    },
+    {
+      "name": "Fujifilm XF 70-300mm F/4-5.6 R LM OIS WR",
+      "desc_en": "Telephoto zoom for wildlife and distant subjects.",
+      "desc_fr": "Zoom téléobjectif pour la faune et les sujets éloignés."
+    },
+    {
+      "name": "Viltrox 75mm F/1.2",
+      "desc_en": "Big prime lens for portraits with creamy bokeh.",
+      "desc_fr": "La focale fixe imposante pour les portraits avec un bokeh exceptionnel."
+    },
+    {
+      "name": "Viltrox 13mm F/1.4",
+      "desc_en": "Wide angle lens for architecture and landscapes.",
+      "desc_fr": "Objectif grand angle pour l'architecture et les paysages."
     }
   ]
 }

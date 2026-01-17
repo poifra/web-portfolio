@@ -1,16 +1,15 @@
-document.addEventListener('DOMContentLoaded', async () => {
-    const path = window.location.pathname;
-    const isFr = path.includes('/fr/');
-    const currentLang = isFr ? 'fr' : 'en';
-    const lang = path.includes('/fr/') ? 'fr' : 'en';
-    const isGalleryPage = document.getElementById('gallery-grid') !== null;
-    const otherLang = isFr ? 'en' : 'fr';
-    const targetUrl = path.replace(`/${currentLang}/`, `/${otherLang}/`);
+const path = window.location.pathname;
+const isFr = path.includes('/fr/');
+const currentLang = isFr ? 'fr' : 'en';
+const lang = path.includes('/fr/') ? 'fr' : 'en';
+const isGalleryPage = document.getElementById('gallery-grid') !== null;
+const otherLang = isFr ? 'en' : 'fr';
+const targetUrl = path.replace(`/${currentLang}/`, `/${otherLang}/`);
 
-    // 1. Inject Navigation
+document.addEventListener('DOMContentLoaded', async () => {
+    //navigation setup
     const navElement = document.getElementById('main-nav');
         if (navElement) {
-            // Get current filename for "active" class highlighting
             const currentFile = path.split('/').pop() || "index.html";
 
             navElement.innerHTML = `
@@ -36,7 +35,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             `;
         }
 
-    // 2. Load Gallery Data
     if (isGalleryPage) {
         try {
             const response = await fetch('../assets/photos.json');
@@ -54,23 +52,19 @@ function setupFilters(photos, lang) {
     const filterContainer = document.getElementById('theme-filters');
     if (!filterContainer) return;
     
-    // Clear container in case of re-renders
     filterContainer.innerHTML = '';
 
-    // 1. Create and add "All" button FIRST
     const allBtn = document.createElement('button');
     allBtn.textContent = lang === 'fr' ? 'Tous' : 'All';
-    allBtn.className = 'filter-btn active'; // Set as active by default
+    allBtn.className = 'filter-btn active';
     allBtn.onclick = () => filterGallery('all', photos, lang, allBtn);
     filterContainer.appendChild(allBtn);
 
-    // 2. Extract unique themes safely
     const allThemes = [];
     photos.forEach(p => {
-        // Use (p.theme || "") to prevent crashes if a photo is missing the theme key
         const themes = (p.theme || "").split(',').map(t => t.trim());
         themes.forEach(t => {
-            if (t) allThemes.push(t); // Only add if the string isn't empty
+            if (t) allThemes.push(t);
         });
     });
 
@@ -83,10 +77,8 @@ function setupFilters(photos, lang) {
         "52frames": { en: "52Frames", fr: "52Frames" }
     };
 
-    // 4. Create theme buttons
     uniqueThemes.forEach(id => {
         const btn = document.createElement('button');
-        // Use the label if it exists, otherwise capitalize the ID
         const label = themeLabels[id] ? themeLabels[id][lang] : id.charAt(0).toUpperCase() + id.slice(1);
         
         btn.textContent = label;
@@ -110,7 +102,6 @@ function renderGallery(photos, themeId, lang) {
     const filtered = themeId === 'all' 
         ? photos 
         : photos.filter(p => {
-            // Split string into array, trim whitespace, and check for ID
             const themeList = p.theme.split(',').map(t => t.trim());
             return themeList.includes(themeId);
         });
@@ -119,20 +110,18 @@ function renderGallery(photos, themeId, lang) {
         const item = document.createElement('div');
         item.className = 'grid-item';
         
-        // Grid uses THUMB (fast)
         const thumbPath = `../images/${photo.thumb}`;
-        // Lightbox uses FULL (high res)
         const fullPath = `../images/${photo.src}`;
 
         item.innerHTML = `
-            <img src="${thumbPath}" alt="${photo.title_en}" loading="lazy">
+            <img src="${thumbPath}" alt="${isFr ? photo.title_fr : photo.title_en}" loading="lazy">
             <div class="photo-info">
-                <span class="photo-title">${photo.title_en}</span>
+                <span class="photo-title">${isFr ? photo.title_fr : photo.title_en}</span>
             </div>
         `;
         
         item.addEventListener('click', () => {
-            openLightbox(fullPath, photo.title_en); // Opens the big one
+            openLightbox(fullPath, photo.title_en);
         });
 
         grid.appendChild(item);
@@ -151,11 +140,9 @@ function openLightbox(src, caption) {
     lbImg.src = src;
     lbCap.textContent = caption;
 
-    // Prevent body from scrolling while lightbox is open
     document.body.style.overflow = "hidden";
 }
 
-// Close logic
 document.addEventListener('DOMContentLoaded', () => {
     const lightbox = document.getElementById('lightbox');
     const closeBtn = document.querySelector('.close-lightbox');
