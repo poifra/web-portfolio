@@ -131,32 +131,21 @@ function renderGallery(photos, themeId, lang) {
         new Masonry(grid, { itemSelector: '.grid-item', gutter: 20 }).layout();
     });
 }
-async function openLightbox(src, caption) {
+function openLightbox(src, caption, photo) {
     const lightbox = document.getElementById('lightbox');
     const lbImg = document.getElementById('lightbox-img');
     const lbCap = document.getElementById('lightbox-caption');
 
-    // Reset caption and show lightbox
-    lbCap.innerHTML = `<strong>${caption}</strong><br><span id="exif-info">Loading EXIF...</span>`;
+    // Build EXIF display from photo.exif if available
+    let exifDisplay = "No EXIF data available.";
+    if (photo.exif) {
+        const { model, lens, fstop, shutter, iso } = photo.exif;
+        exifDisplay = `${model || 'Unknown Camera'} ${lens ? '| ' + lens : ''}<br>${fstop || ''} | ${shutter || ''} | ISO ${iso || ''}`;
+    }
+
+    lbCap.innerHTML = `<strong>${caption}</strong><br><span id="exif-info">${exifDisplay}</span>`;
     lightbox.style.display = "block";
     lbImg.src = src;
-
-    try {
-        // Fetch the tags from the image URL
-        const tags = await ExifReader.load(src);
-        
-        // Extract the common fields
-        const model = tags['Model']?.description || 'Unknown Camera';
-        const lens = tags['LensModel']?.description || '';
-        const fstop = tags['FNumber']?.description || '';
-        const shutter = tags['ExposureTime']?.description || '';
-        const iso = tags['ISOSpeedRatings']?.description || '';
-
-        document.getElementById('exif-info').innerHTML = 
-            `${model} ${lens ? '| ' + lens : ''}<br>${fstop} | ${shutter} | ISO ${iso}`;
-    } catch (error) {
-        document.getElementById('exif-info').innerHTML = "No EXIF data found.";
-    }
 
     document.body.style.overflow = "hidden";
 }
