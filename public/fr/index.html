@@ -1,4 +1,30 @@
-<header id="main-nav"></header>
-<main id="gallery-grid"></main>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallerie | François Poitras</title>
+    <!-- We go UP one level to find assets because we are in the /fr/ folder -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="gallery-body">
 
-<script src="../assets/js/app.js"></script>
+    <!-- Header injected by app.js -->
+    <header id="main-nav" class="site-header"></header>
+
+    <main class="content-wrapper">
+        <section class="controls">
+            <h1 id="page-title">Portfolio</h1>
+            <!-- Category buttons will be injected here -->
+            <div id="theme-filters" class="filter-group"></div>
+        </section>
+
+        <!-- The Image Grid -->
+        <div id="gallery-grid" class="grid-container">
+            <!-- Photos injected here -->
+        </div>
+    </main>
+
+    <script src="../assets/js/app.js"></script>
+</body>
+</html>
