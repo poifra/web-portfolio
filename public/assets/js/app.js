@@ -1,19 +1,40 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const path = window.location.pathname;
+    const isFr = path.includes('/fr/');
+    const currentLang = isFr ? 'fr' : 'en';
     const lang = path.includes('/fr/') ? 'fr' : 'en';
     const isGalleryPage = document.getElementById('gallery-grid') !== null;
+    const otherLang = isFr ? 'en' : 'fr';
+    const targetUrl = path.replace(`/${currentLang}/`, `/${otherLang}/`);
 
     // 1. Inject Navigation
     const navElement = document.getElementById('main-nav');
-    if (navElement) {
-        navElement.innerHTML = `
-            <nav style="display:flex; gap:30px; font-weight:500;">
-                <a href="/${lang}/" style="text-decoration:none; color:inherit; border-bottom: 2px solid #000;">${lang === 'fr' ? 'Galerie' : 'Gallery'}</a>
-                <a href="/${lang}/about.html" style="text-decoration:none; color:inherit;">${lang === 'fr' ? 'À Propos' : 'About'}</a>
-                <a href="/${lang}/gear.html" style="text-decoration:none; color:inherit;">${lang === 'fr' ? 'Équipement' : 'Gear'}</a>
-            </nav>
-        `;
-    }
+        if (navElement) {
+            // Get current filename for "active" class highlighting
+            const currentFile = path.split('/').pop() || "index.html";
+
+            navElement.innerHTML = `
+                <nav class="nav-container">
+                    <div class="nav-links">
+                        <a href="/${currentLang}/index.html" class="${currentFile === 'index.html' ? 'active' : ''}">
+                            ${isFr ? 'Galerie' : 'Gallery'}
+                        </a>
+                        <a href="/${currentLang}/about.html" class="${currentFile === 'about.html' ? 'active' : ''}">
+                            ${isFr ? 'À Propos' : 'About'}
+                        </a>
+                        <a href="/${currentLang}/gear.html" class="${currentFile === 'gear.html' ? 'active' : ''}">
+                            ${isFr ? 'Équipement' : 'Gear'}
+                        </a>
+                    </div>
+                    
+                    <div class="lang-switcher">
+                        <a href="${targetUrl}" class="lang-link">
+                            ${isFr ? 'ENGLISH' : 'FRANÇAIS'}
+                        </a>
+                    </div>
+                </nav>
+            `;
+        }
 
     // 2. Load Gallery Data
     if (isGalleryPage) {
