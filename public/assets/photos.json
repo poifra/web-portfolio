@@ -71,6 +71,7 @@
     { "theme": "street,52Frames", "thumb": "thumbs/velo-1.webp", "src": "velo-1.jpg", "title_en": "Caught in the rain", "title_fr": "Pris sous la pluie" },
     { "theme": "street,52Frames", "thumb": "thumbs/velo-2.webp", "src": "velo-2.jpg", "title_en": "Snow bike", "title_fr": "Vélo dans la neige" },
     { "theme": "nature", "thumb": "thumbs/verglas.webp", "src": "verglas.jpg", "title_en": "Ice rain", "title_fr": "Verglas" },
+    { "theme": "nature", "thumb": "thumbs/voie-lactee.webp", "src": "voie-lactee.jpg", "title_en": "Milky Way", "title_fr": "Voie lactée" },
     { "theme": "street,London 2024", "thumb": "thumbs/ww2-monument.webp", "src": "ww2-monument.jpg", "title_en": "WW2 Monument", "title_fr": "Monument de la Seconde Guerre mondiale" }
   ]
 }
