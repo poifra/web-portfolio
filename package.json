@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "sharp": "^0.34.5"
+  },
+   "scripts": {
+    "deploy": "aws s3 sync ./public s3://fp-photographies.com --delete"
+  }
+}
