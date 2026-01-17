@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<script>
+    // Simple redirect logic
+    const userLang = navigator.language || navigator.userLanguage;
+    if (userLang.startsWith('fr')) {
+        window.location.href = "public/fr/";
+    } else {
+        window.location.href = "public/en/";
+    }
+</script>
+</html>
