@@ -68,6 +68,18 @@ function setupFilters(photos, lang) {
         });
     });
 
+    const uniqueThemes = [...new Set(allThemes)].sort();
+
+    uniqueThemes.forEach(id => {
+        const btn = document.createElement('button');
+        const label = id.charAt(0).toUpperCase() + id.slice(1);
+        
+        btn.textContent = label;
+        btn.className = 'filter-btn';
+        btn.onclick = () => filterGallery(id, photos, lang, btn);
+        filterContainer.appendChild(btn);
+    });
+
 }
 
 function filterGallery(themeId, photos, lang, clickedBtn) {

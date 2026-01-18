@@ -870,6 +870,21 @@
       }
     },
     {
+      "theme": "street,London 2024",
+      "thumb": "thumbs/londres-4.webp",
+      "src": "londres-4.jpg",
+      "title_en": "London view",
+      "title_fr": "Vue de Londres",
+      "exif": {
+        "model": "FUJIFILM X-T5",
+        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "fstop": "f/5.6",
+        "shutter": "1/5800s",
+        "iso": 500,
+        "focal": "18mm"
+      }
+    },
+    {
       "theme": "street",
       "thumb": "thumbs/plage-isle-aux-coudres.webp",
       "src": "plage-isle-aux-coudres.jpg",
