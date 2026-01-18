@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script>
+    <meta name="description" content="Photographer based in Montréal.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fp-photographies.ca/">
+    <meta property="og:title" content="François Poitras | Portfolio">
+    <meta property="og:description" content="Photographer based in Montréal.">
+    <!-- Use a high-res optimized photo. 1200x630px is the industry standard. -->
+    <meta property="og:image" content="https://fp-photographies.ca/images/thumbs/profile.webp">
+
+    <!-- Twitter (Discord uses these for the "Large Image" effect) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fp-photographies.ca/">
+    <meta name="twitter:title" content="François Poitras | Portfolio">
+    <meta name="twitter:description" content="Photographer based in Montréal.">
+    <meta name="twitter:image" content="https://fp-photographies.ca/images/thumbs/profile.webp">
+        <script>
         const lang = navigator.language || navigator.userLanguage;
-        window.location.href = lang.startsWith('fr') ? "/fr/" : "/en/";
+        window.location.href = lang.startsWith('fr') ? "/fr/index.html" : "/en/index.html";
     </script>
 </head>
 <body style="background: #fff;"></body>

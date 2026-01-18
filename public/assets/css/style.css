@@ -115,44 +115,6 @@ body {
     .about-photo { margin-right: 0; margin-bottom: 20px; }
 }
 
-/* Lightbox Styles */
-.lightbox {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 2000; /* Higher than header */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.95); /* Dark background */
-    cursor: zoom-out;
-}
-
-.lightbox-content {
-    margin: auto;
-    display: block;
-    width: auto;
-    height: auto;
-    max-width: 90%;
-    max-height: 90%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    user-select: none;
-}
-
-/* Caption */
-#lightbox-caption {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-    color: #ccc;
-    font-size: 0.9rem;
-}
-
 /* Close Button */
 .close-lightbox {
     position: absolute;
@@ -398,26 +360,61 @@ body {
     color: #000;
 }
 
-#lightbox-caption {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 15px 25px;
-    border-radius: 8px;
-    backdrop-filter: blur(5px); /* Modern frosted glass effect */
-    line-height: 1.5;
+/* 1. The main dark overlay stays the same */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    overflow: auto; /* Allow scrolling if the caption is long */
 }
 
-#exif-info {
+/* 2. The Wrapper: This centers everything and matches the image width */
+.lightbox-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-flex; /* Shrinks to fit contents */
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%; /* Prevents the box from hitting screen edges */
+}
+
+.lightbox-content {
     display: block;
-    margin-top: 8px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: rgba(255, 255, 255, 0.5);
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 75vh;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    
+    /* Smooth fade in */
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0; /* Default to hidden */
+}
+
+/* 4. The Caption: Matches 100% of the wrapper (which is the image width) */
+#lightbox-caption {
+    width: 100%; 
+    padding: 20px;
+    background: rgba(25, 25, 25, 0.9); /* Dark background for readability */
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    text-align: left; /* Looks more professional for EXIF data */
+    box-sizing: border-box;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.exif-container {
+    margin-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 10px;
+    font-size: 0.8rem;
+    word-wrap: break-word; /* Prevents text from pushing past image width */
 }

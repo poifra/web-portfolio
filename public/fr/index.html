@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerie | François Poitras</title>
+
+    <meta name="description" content="Photographer based in Montréal.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fp-photographies.ca/">
+    <meta property="og:title" content="François Poitras | Portfolio">
+    <meta property="og:description" content="Photographe basé à Montréal.">
+    <!-- Use a high-res optimized photo. 1200x630px is the industry standard. -->
+    <meta property="og:image" content="https://fp-photographies.ca/images/thumbs/profile.webp">
+
+    <!-- Twitter (Discord uses these for the "Large Image" effect) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fp-photographies.ca/">
+    <meta name="twitter:title" content="François Poitras | Portfolio">
+    <meta name="twitter:description" content="Photographe basé à Montréal.">
+    <meta name="twitter:image" content="https://fp-photographies.ca/images/thumbs/profile.webp">
+
+    <title>Gallerie | François Poitras</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="gallery-body">
@@ -13,7 +31,7 @@
 
     <main class="content-wrapper">
         <header class="gallery-intro">
-            <h1>François Poitras <span class="subtitle">| Photographie</span></h1>
+            <h1>François Poitras <span class="subtitle">| Photography</span></h1>
             <nav class="sub-nav">
                 <!-- Filter buttons injected here -->
                 <div id="theme-filters" class="filter-group"></div>
@@ -27,8 +45,12 @@
 
     <div id="lightbox" class="lightbox">
         <span class="close-lightbox">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-        <div id="lightbox-caption"></div>
+        
+        <!-- New Wrapper Container -->
+        <div class="lightbox-wrapper">
+            <img class="lightbox-content" id="lightbox-img">
+            <div id="lightbox-caption"></div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>

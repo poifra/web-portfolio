@@ -68,24 +68,6 @@ function setupFilters(photos, lang) {
         });
     });
 
-    // 3. Get unique themes and sort them alphabetically
-    const uniqueThemes = [...new Set(allThemes)].sort();
-
-    const themeLabels = {
-        "nature": { en: "Nature", fr: "Nature" },
-        "urban": { en: "Street", fr: "Photo de rue" },
-        "52frames": { en: "52Frames", fr: "52Frames" }
-    };
-
-    uniqueThemes.forEach(id => {
-        const btn = document.createElement('button');
-        const label = themeLabels[id] ? themeLabels[id][lang] : id.charAt(0).toUpperCase() + id.slice(1);
-        
-        btn.textContent = label;
-        btn.className = 'filter-btn';
-        btn.onclick = () => filterGallery(id, photos, lang, btn);
-        filterContainer.appendChild(btn);
-    });
 }
 
 function filterGallery(themeId, photos, lang, clickedBtn) {
@@ -121,7 +103,7 @@ function renderGallery(photos, themeId, lang) {
         `;
         
         item.addEventListener('click', () => {
-            openLightbox(fullPath, photo.title_en);
+            openLightbox(fullPath, isFr ? photo.title_fr : photo.title_en, photo);
         });
 
         grid.appendChild(item);
@@ -131,22 +113,40 @@ function renderGallery(photos, themeId, lang) {
         new Masonry(grid, { itemSelector: '.grid-item', gutter: 20 }).layout();
     });
 }
-function openLightbox(src, caption, photo) {
+function openLightbox(imgSrc, title, photo) {
     const lightbox = document.getElementById('lightbox');
     const lbImg = document.getElementById('lightbox-img');
     const lbCap = document.getElementById('lightbox-caption');
 
-    // Build EXIF display from photo.exif if available
-    let exifDisplay = "No EXIF data available.";
-    if (photo.exif) {
-        const { model, lens, fstop, shutter, iso } = photo.exif;
-        exifDisplay = `${model || 'Unknown Camera'} ${lens ? '| ' + lens : ''}<br>${fstop || ''} | ${shutter || ''} | ISO ${iso || ''}`;
+    // 1. Hide the image immediately to prevent the "ghost" of the previous photo
+    lbImg.style.opacity = '0';
+    
+    // 2. Clear the old caption so it doesn't flicker either
+    lbCap.innerHTML = '';
+
+    const imgPath = `../images/${imgSrc}`;
+
+    // 3. Prepare the new EXIF HTML
+    let exifHtml = "";
+    if (photo.exif && photo.exif.model) {
+        const e = photo.exif;
+        exifHtml = `
+            <div class="exif-container">
+                <div class="exif-tag">${e.model} | ${e.lens}</div>
+                <div class="exif-specs">${e.fstop} · ${e.shutter} · ISO ${e.iso} · ${e.focal}</div>
+            </div>`;
     }
 
-    lbCap.innerHTML = `<strong>${caption}</strong><br><span id="exif-info">${exifDisplay}</span>`;
-    lightbox.style.display = "block";
-    lbImg.src = src;
+    // 4. Set the new Source
+    lbImg.src = imgPath;
 
+    // 5. Only show the image and caption once the new image is READY
+    lbImg.onload = () => {
+        lbImg.style.opacity = '1';
+        lbCap.innerHTML = `<strong>${title}</strong>${exifHtml}`;
+    };
+
+    lightbox.style.display = "block";
     document.body.style.overflow = "hidden";
 }
 

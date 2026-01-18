@@ -417,7 +417,15 @@
       "thumb": "thumbs/guepe.webp",
       "src": "guepe.jpg",
       "title_en": "Wasp",
-      "title_fr": "Guêpe"
+      "title_fr": "Guêpe",
+      "exif": {
+        "model": "FUJIFILM X-S10",
+        "lens": "65.0 mm",
+        "fstop": "f/1",
+        "shutter": "1/200s",
+        "iso": 2000,
+        "focal": "65mm"
+      }
     },
     {
       "theme": "52Frames",
@@ -869,7 +877,7 @@
       "title_fr": "Plage de l'Isle-aux-Coudres",
       "exif": {
         "model": "FUJIFILM X-S10",
-        "lens": "XF18-55mmF2.8-4 R LM OIS",
+        "lens": "XF18-55mmF2.8-4 R LM OIS\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
         "fstop": "f/6.4",
         "shutter": "1/1400s",
         "iso": 320,
@@ -1061,27 +1069,7 @@
       "thumb": "thumbs/ww2-monument.webp",
       "src": "ww2-monument.jpg",
       "title_en": "WW2 Monument",
-      "title_fr": "Monument de la Seconde Guerre mondiale"
-    },
-    {
-      "src": "guepe.JPG",
-      "theme": "all",
-      "title_en": "guepe.JPG",
-      "title_fr": "guepe.JPG",
-      "exif": {
-        "model": "FUJIFILM X-S10",
-        "lens": "65.0 mm",
-        "fstop": "f/1",
-        "shutter": "1/200s",
-        "iso": 2000,
-        "focal": "65mm"
-      }
-    },
-    {
-      "src": "ww2-monnument.jpg",
-      "theme": "all",
-      "title_en": "ww2-monnument.jpg",
-      "title_fr": "ww2-monnument.jpg",
+      "title_fr": "Monument de la Seconde Guerre mondiale",
       "exif": {
         "model": "FUJIFILM X-T5",
         "lens": "XF18-55mmF2.8-4 R LM OIS",
